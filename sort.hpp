@@ -10,7 +10,7 @@ void bubble_sort( std::vector<T>& list )
 {
 	for ( int i = 0; i < list.size(); i++ )
 	{
-		printf( "iter %d\n", i );
+		//printf( "iter %d\n", i );
 		bool is_sorted = true;
 
 		//  sort by pairs
@@ -19,7 +19,7 @@ void bubble_sort( std::vector<T>& list )
 			auto next_itr = itr + 1;
 			if ( *itr > *next_itr )
 			{
-				printf( "%d > %d: swapping\n", *itr, *next_itr );
+				//printf( "%d > %d: swapping\n", *itr, *next_itr );
 				std::iter_swap( itr, next_itr );
 
 				is_sorted = false;
@@ -28,7 +28,7 @@ void bubble_sort( std::vector<T>& list )
 
 		if ( is_sorted )
 		{
-			printf( "sorted\n" );
+			//printf( "sorted\n" );
 			break;
 		}
 	}
@@ -42,7 +42,7 @@ void selection_sort( std::vector<T>& list )
 {
 	for ( int i = 0; i < list.size(); i++ )
 	{
-		printf( "iter %d\n", i );
+		//printf( "iter %d\n", i );
 
 		auto itr = list.begin() + i;
 		auto smallest_itr = itr;
@@ -59,7 +59,7 @@ void selection_sort( std::vector<T>& list )
 		//  swap smallest w/ current
 		if ( smallest_itr != itr )
 		{
-			printf( "%d > %d: swapping\n", *itr, *smallest_itr );
+			//printf( "%d > %d: swapping\n", *itr, *smallest_itr );
 			std::iter_swap( itr, smallest_itr );
 		}
 	}
